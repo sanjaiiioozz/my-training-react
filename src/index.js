@@ -1,17 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
 
+// pi name not matters but double and TriplePi name matters cause it's not default export
+import pi, { doublePi, triplePi } from "./math";
+import * as pie from "./math";
+// don't use wildcard(*) so much, It will import all things which not nessecary
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+  <ul>
+    <li>{pi}</li>
+    <li>{doublePi()}</li>
+    <li>{triplePi()}</li>
+    <li>{pie.default}</li>
+    <li>{pie.doublePi()}</li>
+    <li>{pie.triplePi()}</li>
+  </ul>,
+  document.getElementById("root")
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
