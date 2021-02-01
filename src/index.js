@@ -1,15 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import App from "./components/App";
 
 
-// react convention https://github.com/airbnb/javascript/tree/master/react#naming
-import Heading1 from "./components/Heading";
-import UnorderedList from "./components/UnorderedList";
-ReactDOM.render(
-  <div>
-    <Heading1 />
-    <UnorderedList />
-    <UnorderedList />
-  </div>,
-  document.getElementById("root")
-);
+
+ReactDOM.render(<App />, document.getElementById("root"));
